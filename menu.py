@@ -2,7 +2,7 @@ from menu_item import MenuItem
 
 
 class Menu:
-    # This is the full menu
+    # Return all items on the menu
 
     def __init__(self):
         self.menu = [MenuItem(name="espresso", cost=2.5, water=200, milk=150, coffee=24),

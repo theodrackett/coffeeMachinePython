@@ -1,5 +1,5 @@
 class MenuItem:
-    # Each item on the menu
+    # Model for each item on the menu
     def __init__(self, name, cost, water, milk, coffee):
         self.name = name
         self.cost = cost

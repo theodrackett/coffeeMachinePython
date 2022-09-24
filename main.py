@@ -13,6 +13,6 @@ while not jittery:
     while choice not in my_choices:
         choice = input(f"You can only choose one of {my_choices}: ")
 
-    print(choice)
+    print(f"You have chosen {choice}")
 
     jittery = True
