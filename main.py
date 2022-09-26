@@ -7,12 +7,18 @@ from menu import Menu
 jittery = False
 
 while not jittery:
+
     my_menu = Menu()
-    my_choices = my_menu.get_items()
-    choice = input(f"Please choose a drink {my_choices}: ")
-    while choice not in my_choices:
-        choice = input(f"You can only choose one of {my_choices}: ")
+    option = my_menu.options()
+    while 1 > option > 4:
+        option = my_menu.options()
 
-    print(f"You have chosen {choice}")
+    if option != 4:
+        my_choices = my_menu.get_items()
+        choice = input(f"Please choose a drink {my_choices}: ")
+        while not my_menu.find_drink(choice):
+            choice = input(f"You can only choose one of {my_choices}: ")
 
-    jittery = True
+        print(f"You have chosen {choice}")
+    else:
+        jittery = True
