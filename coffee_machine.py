@@ -28,4 +28,4 @@ class CoffeeMachine:
         for ingredient in joe.ingredients:
             self.resources[ingredient] -= joe.ingredients[ingredient]
 
-            print(f"Here is your {joe.name}. Have a wonderful day!")
+        print(f"Here is your {joe.name}. Have a wonderful day!")

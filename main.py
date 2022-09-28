@@ -20,6 +20,8 @@ def options():
     return int(choice)
 
 
+my_coffee_machine = CoffeeMachine()
+
 while not jittery:
 
     option = options()
@@ -33,11 +35,12 @@ while not jittery:
                 my_menu = Menu()
                 my_choices = my_menu.get_items()
                 choice = input(f"Please choose a drink {my_choices}: ")
-                while not my_menu.find_drink(choice):
+                while my_menu.find_drink(choice) is None:
                     choice = input(f"You can only choose one of {my_choices}: ")
 
-                if CoffeeMachine.enough_resources(choice):
-                    CoffeeMachine.cup_a_joe()
+                my_joe = my_menu.find_drink(choice)
+                if my_coffee_machine.enough_resources(my_joe):
+                    my_coffee_machine.cup_a_joe(my_joe)
             case 2:
                 # Print report
                 pass

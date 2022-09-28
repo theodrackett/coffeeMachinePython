@@ -19,6 +19,6 @@ class Menu:
     def find_drink(self, drink_to_find):
         for drink in self.menu:
             if drink.name == drink_to_find:
-                return True
+                return drink
 
-        return False
+        return None
